@@ -21,8 +21,8 @@ pipeline {
               sleep time: 10, unit: 'SECONDS'
             }
           }
-          stage('Java 9') {
-            agent { label 'jdk9' }
+          stage('Java 10') {
+            agent { label 'jdk10' }
             steps {
               sh 'java -version'
               sleep time: 20, unit: 'SECONDS'
