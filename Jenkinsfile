@@ -17,7 +17,7 @@ stage('Testing') {
             agent { label 'jdk8' }
             steps {
               container('maven8') {
-                sh 'mvn -v'
+                sh 'java -version'
               }
             }
           }
@@ -25,7 +25,7 @@ stage('Testing') {
             agent { label 'jdk10' }
             steps {
               container('maven9') {
-                sh 'mvn -v'
+                sh 'java -version'
               }
             }
           }
