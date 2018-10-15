@@ -16,7 +16,7 @@ stage('Testing') {
           stage('Java 8') {
             agent { label 'jdk8' }
             steps {
-              container('maven8') {
+              container('jdk8') {
                 sh 'java -version'
               }
             }
@@ -24,7 +24,7 @@ stage('Testing') {
           stage('Java 10') {
             agent { label 'jdk10' }
             steps {
-              container('maven9') {
+              container('jdk10') {
                 sh 'java -version'
               }
             }
